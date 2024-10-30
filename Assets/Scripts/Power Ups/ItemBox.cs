@@ -22,7 +22,7 @@ public class ItemBox : TriggerZone
 
     public override void Activate(Collider collider)
     {
-        if (cooldown < 0)
+        if (cooldown > 0)
         {
             return;
         }

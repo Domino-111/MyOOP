@@ -13,6 +13,21 @@ public class HighScoreSystem : MonoBehaviour
 
     public Transform panel;
     public TMP_Text textPrefab;
+    
+    public static HighScoreSystem instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {

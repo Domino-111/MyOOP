@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5015f261ba390459104d9f76f5a7b1, type: 3}
   m_Name: Boost
   m_EditorClassIdentifier: 
-  chance: 2
+  chance: 3
   cooldown: 1
-  duation: 0
-  power: 5
+  duration: 0
+  power: 50

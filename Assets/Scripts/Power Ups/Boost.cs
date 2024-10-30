@@ -8,6 +8,6 @@ public class Boost : PowerUp
 {
     public override void UsePowerUp(Rigidbody rb)
     {
-        rb.AddRelativeForce(Vector3.left * power, ForceMode.VelocityChange);
+        rb.AddForce(rb.velocity.normalized * power, ForceMode.VelocityChange);
     }
 }

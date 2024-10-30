@@ -1342,7 +1342,7 @@ GameObject:
   - component: {fileID: 610702326}
   - component: {fileID: 610702325}
   - component: {fileID: 610702324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Marble (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2223,7 +2223,7 @@ GameObject:
   - component: {fileID: 884470050}
   - component: {fileID: 884470049}
   - component: {fileID: 884470048}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Marble (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3342,6 +3342,7 @@ MonoBehaviour:
   powerUp:
   - {fileID: 11400000, guid: 63ca230737cecb844b11fe9b7a752194, type: 2}
   - {fileID: 11400000, guid: 5ce05de8867b77d40bcc9167cd31213c, type: 2}
+  - {fileID: 11400000, guid: 81dbdb952a88bf842aa545449e9374d5, type: 2}
   speed: 20
   totalPUChances: 0
 --- !u!65 &1472406598
@@ -3424,7 +3425,7 @@ Transform:
   m_GameObject: {fileID: 1472406596}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.839, y: -0.09, z: 0}
+  m_LocalPosition: {x: -0.634, y: -1.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4204,7 +4205,7 @@ GameObject:
   - component: {fileID: 1786421630}
   - component: {fileID: 1786421629}
   - component: {fileID: 1786421628}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Marble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
