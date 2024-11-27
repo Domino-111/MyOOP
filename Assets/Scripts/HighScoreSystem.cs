@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using TMPro;
+using System.Linq;
 
 public class HighScoreSystem : MonoBehaviour
 {
@@ -31,7 +32,21 @@ public class HighScoreSystem : MonoBehaviour
 
     private void Start()
     {
+        HighScoreData data = JsonSaveLoad.LoadHighScore();
+
+        if (data != null)
+        {
+            this.names = data.names.ToList();
+            this.scores = data.scores.ToList();
+        }
         RefreshScoreDsiplay();
+    }
+
+    private void OnDestroy()
+    {
+        HighScoreData data = new HighScoreData(scores.ToArray(), names.ToArray());
+
+        JsonSaveLoad.SaveHighScore(data);
     }
 
     private void RefreshScoreDsiplay()

@@ -5,7 +5,30 @@ using System.IO;
 
 public static class JsonSaveLoad
 {
+#if UNITY_EDITOR
+    public static string fileHS = Application.dataPath + "/save.json";
+    public static string filePos = Application.dataPath + "/save.json";
+#else
     public static string file = Application.dataPath + "/save.json";
+    public static string filePos = Application.dataPath + "/save.json";
+#endif
+
+    public static void SaveHighScore(HighScoreData data)
+    {
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(fileHS, json);
+    }
+
+    public static HighScoreData LoadHighScore()
+    {
+        if (File.Exists(fileHS))
+        {
+            string json = File.ReadAllText(fileHS);
+            return JsonUtility.FromJson<HighScoreData>(json);
+        }
+
+        return null;
+    }
 
     public static void Save(GameData data)
     {
@@ -15,14 +38,14 @@ public static class JsonSaveLoad
 
         Debug.Log("Working");
 
-        File.WriteAllText(file, json);
+        File.WriteAllText(filePos, json);
     }
 
     public static GameData Load()
     {
-        if (File.Exists(file))
+        if (File.Exists(filePos))
         {
-            string json = File.ReadAllText(file);
+            string json = File.ReadAllText(filePos);
             return JsonUtility.FromJson<GameData>(json);
         }
 

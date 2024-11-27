@@ -1,5 +1,12 @@
 {
-    "data": "Hello World",
-    "funnyNumber": 1337,
-    "floaty": 42.41999816894531
+    "scores": [
+        7.19463586807251,
+        7.456207752227783,
+        7.6807990074157719
+    ],
+    "names": [
+        "Balder",
+        "Balder",
+        "Balder"
+    ]
 }
