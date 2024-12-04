@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c1f0ff3e5d27c459840ecc84be6001, type: 3}
   m_Name: Glue
   m_EditorClassIdentifier: 
-  chance: 1
+  chance: 0
   cooldown: 1
   duration: 1
   power: 1
